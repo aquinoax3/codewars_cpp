@@ -8,19 +8,18 @@
 
 // If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell, None in Rust).
 
-
 #include <vector>
 #include <algorithm>
 
-int sumOfDifferences(std::vector<int>& arr){
- std::vector<int> reversedArr = arr;  // Create a copy
- std::reverse(reversedArr.begin(), reversedArr.end()); // Reverse the copy
-
+int sumOfDifferences(std::vector<int> arr){
     int sum = 0;
-    for (int i = 0; i < ((int) reversedArr.size()) - 1; i++) {
-        int dif = reversedArr[i] - reversedArr[i + 1];
-        sum += dif;
-    }
+    std::sort(arr.rbegin(), arr.rend());
+    if (arr.size() <= 1)
+        sum = 0;
+    else
+        for (int i = 0; i < arr.size() - 1; i++) {
+            sum += arr[i] - arr[i + 1];
+        }
+    return sum;
 
-    return sum; // Returning the sum instead of printing it
 }
