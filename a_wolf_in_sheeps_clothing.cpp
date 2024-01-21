@@ -24,7 +24,7 @@ std::string warn_the_sheep(const std::vector<std::string>& queue){
         if(queue.back() == "wolf") {
             return "Pls go away and stop eating my sheep";
         } else if(queue[i] == "wolf") {
-            return "Oi! Sheep number " + queue[i + 1] "! You are about to be eaten by a wolf!";
+            return "Oi! Sheep number " + queue[i + 1] + "! You are about to be eaten by a wolf!";
         }
     }
 }
