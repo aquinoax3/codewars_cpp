@@ -5,17 +5,14 @@
 #include <iostream>
 #include <string>
 
-std::string fakeBin(std::string str){
+std::string fakeBin(std::string str) {
     std::string newBin = "";
-    //   for (int i = 0; i < str.size(); i++) {
-    //    if(int (str[i]) < 5) {
-    //      str[i] = "0";
-    //      newBin += str[i]
-    //    } else {
-    //      str[i] = "1";
-    //      newBin += str[i]
-    //    }
-    //   }
-    std::cout << int (str[1]) << std::endl;
-//   return newBin;
+    for (int i = 0; i < str.size(); i++) {
+        if (int(str[i] - '0') < 5) {
+        newBin += '0';
+        } else {
+        newBin += '1';
+        }
+    }
+    return newBin;
 }
