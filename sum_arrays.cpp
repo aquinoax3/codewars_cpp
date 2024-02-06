@@ -20,6 +20,7 @@
 
 
 #include <vector>
+#include <numeric>
 
 int sum(std::vector<int> nums) {
     if (nums.size() == 0) return 0;
@@ -29,4 +30,10 @@ int sum(std::vector<int> nums) {
         result += el;
     }
     return result;
+}
+
+
+// cleaner solution
+int sum(std::vector<int> nums) {
+    return std::accumulate(nums.begin(), nums.end(), 0);
 }
