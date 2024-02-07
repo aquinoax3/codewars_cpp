@@ -16,3 +16,15 @@ std::vector<int> MonkeyCount(int n) {
   }
   return newArr;
 }
+
+// Cleaner Solution
+
+#include <vector>
+#include <numeric>
+
+std::vector<int> MonkeyCount(int n) {
+  std::vector<int> newArr(n);
+  std::iota(newArr.begin(), newArr.end(), 1);
+  
+    return newArr;
+}
