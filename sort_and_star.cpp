@@ -9,7 +9,21 @@
 #include <vector>
 #include <string>
 
+#include <vector>
+#include <string>
+
 std::string twoSort(std::vector<std::string> s)
 {
-    return "";
+    std::string result = "";
+    sort(s.begin(), s.end());
+        for (int i = 0; i < s[0].size(); i++) {
+        result += s[0][i];
+        result += "***";
+        }
+    
+    result.pop_back();
+    result.pop_back();
+    result.pop_back();
+    
+    return result;
 }
