@@ -9,4 +9,14 @@
 // 1 Imperial Gallon = 4.54609188 litres
 // 1 Mile = 1.609344 kilometres
 
+#include <cmath>
 
+double converter(int mpg)
+{
+    double liters = mpg/4.54609188;
+    double result = liters * 1.609344;
+
+   result = std::round(result * 100) / 100;
+
+    return result;
+}
