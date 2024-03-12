@@ -13,8 +13,6 @@
 // time = 11.8--> litres = 
 
 
-#include <cmath>
-
 int litres(double time) {
-    return time < 2 ? 0 : std::round(time * .5);
+    return time < 2 ? 0 : time * .5;
 }
