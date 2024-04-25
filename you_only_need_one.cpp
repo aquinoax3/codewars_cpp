@@ -4,15 +4,16 @@
 
 // Return true if the array contains the value, false if not.
 
-
 #include <vector>
 #include <string>
 #include <algorithm>
 
-bool check(const std::vector<std::string>& seq, const std::string& elem) {
-    if(std::find(seq.begin(), seq.end(), elem) != seq.end()) {
-        return true;
-    } else {
-        return false;
+bool check(const std::vector<std::string> &seq, const std::string &elem) {
+    for (auto el : seq) {
+        if (el == elem) {
+            return true;
+        }
     }
+
+    return false;
 }
