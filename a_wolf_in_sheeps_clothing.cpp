@@ -18,13 +18,18 @@
 
 #include <vector>
 #include <string>
+#include <bits/stdc++.h>
 
 std::string warn_the_sheep(const std::vector<std::string>& queue){
-    for (size_t i = 0; i < queue.size(); i++) {
-        if(queue.back() == "wolf") {
-            return "Pls go away and stop eating my sheep";
-        } else if(queue[i] == "wolf") {
-            return "Oi! Sheep number " + queue[i + 1] + "! You are about to be eaten by a wolf!";
-        }
-    }
+  
+  std::vector<std::string> vector = queue;
+  reverse(vector.begin(),vector.end());
+  
+  for(auto animal : vector) {
+    if(vector.front() == "wolf") {
+         return "Pls go away and stop eating my sheep";
+    } else {
+        return "Oi! Sheep number " + vector.back() + "! You are about to be eaten by a wolf!";
+      }
+  }
 }
