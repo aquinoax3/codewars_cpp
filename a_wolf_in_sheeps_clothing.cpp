@@ -24,12 +24,12 @@ std::string warn_the_sheep(const std::vector<std::string>& queue){
   
   std::vector<std::string> vector = queue;
   reverse(vector.begin(),vector.end());
-  
-  for(auto animal : vector) {
-    if(vector.front() == "wolf") {
-         return "Pls go away and stop eating my sheep";
-    } else {
-        return "Oi! Sheep number " + vector.back() + "! You are about to be eaten by a wolf!";
-      }
+    
+  for (int i = 0; i < vector.size(); i++) {
+    if (i == 0 && vector[i] == "wolf") {
+      return "Pls go away and stop eating my sheep";
+    } else if (vector[i] == "wolf") {
+      return "Oi! Sheep number " + std::to_string(i) + "! You are about to be eaten by a wolf!";
+    } 
   }
 }
