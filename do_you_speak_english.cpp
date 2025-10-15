@@ -8,27 +8,14 @@
 
 
 #include <string>
-#include <algorithm>
-#include <set>
 
 bool sp_eng(const std::string& sentence) {
-  std::set<char> word = {'e','n', 'g', 'l', 'i', 's', 'h' };
   std::string result = "";
   
   std::string lowercase = "";
   for (char ch : sentence) {
     lowercase += std::tolower(ch);
   }
- 
-  for (char ch : lowercase) {
-    if (word.find(ch) != word.end()) {
-      result += ch;
-      
-    }
-  }
-  std::cout << "sen: " << sentence << std::endl;
   
-  std::cout << result << std::endl;
-  
-  return result == "english";
+  return lowercase.find("english") != std::string::npos;
 }
