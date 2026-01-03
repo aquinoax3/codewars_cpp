@@ -13,8 +13,8 @@
 #include <cmath>
 
 double distance_between_two_points(const Point& a, const Point& b) {
-  double point1 = pow(a.y - a.x, 2);
-  double point2 = pow(b.y - b.x, 2);
-  
+  double point1 = pow(b.x - a.x, 2);
+  double point2 = pow(b.y - a.y , 2);
+    
   return std::sqrt(point1 + point2); // TODO
 }
