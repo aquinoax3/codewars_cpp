@@ -6,5 +6,6 @@
 
 
 int unusual_five() {
-    return 5;
+  std::string letters = "aaaaa";
+    return letters.size();
 }
